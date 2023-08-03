@@ -20,7 +20,7 @@ export default function GoalInput(props) {
 	}
 
 	return (
-		<Modal visible={props.modalIsVisible} animationType="slide">
+		<Modal visible={props.modalIsVisible} animationType="fade">
 			<View style={styles.inputContainer}>
 				<Image
 					style={styles.image}

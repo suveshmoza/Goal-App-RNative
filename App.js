@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Button, StyleSheet, View, FlatList } from 'react-native';
+import { Button, StyleSheet, View, FlatList, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
+
 export default function App() {
 	const [modalIsVisible, setModalIsVisible] = useState(false);
 	const [goals, setGoals] = useState([]);
@@ -40,6 +41,7 @@ export default function App() {
 					toggleModalHandler={toggleModalHandler}
 				/>
 				<View style={styles.goalsContainer}>
+					<Text style={styles.goalsText}>Your Goals</Text>
 					<FlatList
 						data={goals}
 						renderItem={(itemData) => {
@@ -71,5 +73,9 @@ const styles = StyleSheet.create({
 	goalsContainer: {
 		flex: 5,
 		marginTop: 20,
+	},
+	goalsText: {
+		textAlign: 'center',
+		fontSize: 24,
 	},
 });

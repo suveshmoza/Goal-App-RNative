@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 		opacity: 0.5,
 	},
 	goalsText: {
-		padding: 8,
+		padding: 10,
 		color: '#fff',
 	},
 });
